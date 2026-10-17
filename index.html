@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f7">
+  <title>A Little Birthday Surprise 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="sparkle-field" id="sparkleField" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" id="brandLink" aria-label="Back to beginning"><span class="brand-heart">♥</span> tiny birthday universe</a>
+    <div class="top-actions">
+      <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" title="Toggle background music">♫ <span>Sound off</span></button>
+      <span class="progress-label" id="progressLabel">Surprise 1 of 4</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="scene hero active" id="home" data-scene="1">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-star">✦</span> BREAKING NEWS: YOU'RE ICONIC <span class="tiny-star">✦</span></p>
+        <h1>Hey, <span class="name-highlight" id="friendName">Birthday Girl</span>!<br><span class="headline-second">Your surprise is</span> <em>overdue.</em></h1>
+        <p class="hero-description">Your birthday may have passed, but this website has absolutely no concept of deadlines. 🎂</p>
+        <button class="primary-button" id="startButton" type="button">A little surprise for you <span>💌</span></button>
+        <p class="micro-note">Warning: may cause smiling, eye-rolling &amp; happy tears.</p>
+      </div>
+      <div class="hero-art" aria-label="Birthday illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-note note-one">certified Introvert ✨</div>
+        <div class="floating-note note-two">100% drama 👑</div>
+        <div class="hero-photo-frame">
+          <img src="images\img-1.jpeg" alt="Your friend's photo" class="hero-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+          <div class="photo-placeholder">📸<span>Add her photo</span><small>images/photo1.jpg</small></div>
+          <span class="frame-sticker">★ MAIN CHARACTER ★</span>
+        </div>
+        <span class="doodle doodle-heart">♡</span><span class="doodle doodle-star">✦</span><span class="doodle doodle-spark">✧</span>
+      </div>
+      <div class="scroll-cue"><span></span> YOUR LITTLE ADVENTURE STARTS HERE</div>
+    </section>
+
+    <section class="scene gallery-scene" id="memories" data-scene="2">
+      <div class="section-heading">
+        <p class="eyebrow">EXHIBIT A: PURE CHAOS</p>
+        <h2>A tiny gallery of <em>your greatness.</em></h2>
+        <p>Tap each photo. Yes, this is a very serious museum. Please don't touch the art. (Actually, do.)</p>
+      </div>
+      <div class="photo-gallery">
+        <button class="polaroid polaroid-one" type="button" data-photo="0" data-message="Proof that the camera absolutely adores you. It's honestly getting a little embarrassing for the rest of us. 😌">
+          <span class="polaroid-image"><img src="images/img-1.jpeg" alt="Memory photo one" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="photo-placeholder">📷<small>images/photo1.jpg</small></span></span>
+          <span class="polaroid-caption">main character energy ✨</span><span class="photo-tap">tap me!</span>
+        </button>
+        <button class="polaroid polaroid-two" type="button" data-photo="1" data-message="If being adorable was a full-time job, you'd be employee of the century. Benefits include unlimited snacks. 🍓">
+          <span class="polaroid-image"><img src="images/img-2.png" alt="Memory photo two" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="photo-placeholder">🖼️<small>images/photo2.jpg</small></span></span>
+          <span class="polaroid-caption">Low social battery, high-level human confusion. 😂🤖</span><span class="photo-tap">tap me!</span>
+        </button>
+        <button class="polaroid polaroid-three" type="button" data-photo="2" data-message="Introvert by nature, silent by choice, weird by default. 😂🤌">
+          <span class="polaroid-image"><img src="images/img-3.png" alt="Memory photo three" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="photo-placeholder">🌷<small>images/photo3.jpg</small></span></span>
+          <span class="polaroid-caption">friendship: 10/10 💕</span><span class="photo-tap">tap me!</span>
+        </button>
+      </div>
+      <p class="gallery-footnote">Psst… each photo has a secret message. Go on, investigate. 🕵️‍♀️</p>
+      <button class="secondary-button next-button" type="button" data-next="letter">Okay, show me the letter <span>→</span></button>
+    </section>
+
+    <section class="scene letter-scene" id="letter" data-scene="3">
+      <div class="section-heading">
+        <p class="eyebrow">TOP SECRET · FRIENDSHIP DEPARTMENT</p>
+        <h2>You've got <em>mail!</em></h2>
+        <p>Officially delivered: one introvert with zero social battery and unlimited attitude. 😂🤌</p>
+      </div>
+      <button class="envelope-wrap" id="envelopeButton" type="button" aria-label="Open your birthday letter" aria-expanded="false">
+        <div class="envelope">
+          <div class="envelope-back"></div><div class="letter-paper"><span class="letter-paper-heart">♥</span><span class="letter-paper-text">A note for you</span></div>
+          <div class="envelope-flap"></div><div class="envelope-front"></div><span class="envelope-seal">♥</span>
+        </div>
+        <span class="envelope-hint" id="envelopeHint">TAP TO OPEN YOUR VERY IMPORTANT MAIL 💌</span>
+      </button>
+      <article class="letter-card" id="letterCard" aria-live="polite">
+        <div class="letter-card-top"><span>FOR: Unhumanized 😂🤖</span><span>FROM: YOUR Friend 💌</span></div>
+        <h3>Dear <span id="letterName">Birthday Girl</span>,</h3>
+        <p id="typedLetter"></p>
+        <p class="letter-signoff">Lots of wishes, a little teasing, and unlimited nonsense! 🎂🤍,<br><strong id="senderName">Your Friend</strong> 💗</p>
+        <button class="text-button" id="retypeButton" type="button">Read it again ↻</button>
+      </article>
+      <button class="secondary-button next-button letter-next" type="button" data-next="finale">One last surprise… <span>→</span></button>
+    </section>
+
+    <section class="scene finale-scene" id="finale" data-scene="4">
+      <div class="section-heading">
+        <p class="eyebrow">THE GRAND FINALE</p>
+        <h2>Make a wish, <em>birthday legend.</em></h2>
+        <p>Close your eyes, wish for something amazing, and pretend this cake has zero calories.</p>
+      </div>
+      <div class="cake-stage">
+        <span class="cake-deco deco-left">✦</span><span class="cake-deco deco-right">♡</span>
+        <div class="cake">
+          <div class="candles">
+            <button class="candle" type="button" aria-label="Blow out candle one"><span class="flame"></span></button>
+            <button class="candle" type="button" aria-label="Blow out candle two"><span class="flame"></span></button>
+            <button class="candle" type="button" aria-label="Blow out candle three"><span class="flame"></span></button>
+          </div>
+          <div class="cake-top"></div><div class="cake-layer layer-top"></div><div class="cake-layer layer-bottom"></div><div class="cake-plate"></div>
+          <span class="cake-sprinkles">✦ · ♥ · ✦ · ♥ · ✦</span>
+        </div>
+        <p class="wish-hint" id="wishHint">Psst… click the candles or the button below!</p>
+      </div>
+      <button class="primary-button wish-button" id="wishButton" type="button">Make a wish ✨</button>
+      <div class="final-message" id="finalMessage" aria-live="polite">
+        <div class="final-badge">WISH SENT TO THE UNIVERSE 💫</div>
+        <h3>May your year be full of <em>plot twists</em>…</h3>
+        <p>…the good kind. Big laughs, soft days, wild adventures, answered wishes, unlimited snacks, and people who love you exactly as you are.</p>
+        <p class="final-joke">P.S. You're getting older, but don't worry — your maturity is still buffering. 😂</p>
+        <p class="final-signoff">Happy belated birthday, <span id="finalName">Birthday Girl</span>! 💖</p>
+        <p class="from-line">Made with confusion (and a suspicious amount of CSS) by <strong id="finalSender">Your Friend</strong>.</p>
+        <button class="secondary-button" id="replayButton" type="button">Replay the magic ↻</button>
+      </div>
+      <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <div class="photo-modal" id="photoModal" role="dialog" aria-modal="true" aria-labelledby="modalMessage" hidden>
+    <button class="modal-close" id="modalClose" type="button" aria-label="Close photo message">×</button>
+    <div class="modal-card"><div class="modal-photo-wrap"><img id="modalPhoto" src="" alt="Selected memory"></div><p class="modal-message" id="modalMessage"></p><span class="modal-sparkle">✦ made with ✦</span></div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="audio/a-cheerful-ukulele-waltz.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
